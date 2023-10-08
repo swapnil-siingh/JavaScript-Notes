@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Event Listener</title>
+    </head>
+    <body>
+        <!-- * It is an alternative to onClick attribute of button -->
+        <!-- ? Benefit (1) muktiple event listeners can be added to button -->
+        <!-- ? Benefit (2) we can remove event listener-->
+        <button class="js-button">Click</button>
+        <script>
+            const buttonElement = document.querySelector(".js-button");
+            //Two Paramenters (event , function)
+            buttonElement.addEventListener("click", () => {
+                console.log("click1");
+            });
+            //We can store the fucntion of event listener in another variable
+            const eventFunction = () => {
+                console.log("click2");
+            };
+            // Does the same work
+            buttonElement.addEventListener("click", eventFunction);
+            buttonElement.removeEventListener("click", eventFunction); //Click2 will not run as it is removed
+        </script>
+    </body>
+</html>

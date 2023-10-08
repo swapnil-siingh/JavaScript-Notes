@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Functions</title>
+    </head>
+
+    <body>
+        <p>
+            Functions Lets Us Reuse Code
+        </p>
+        <script>
+            function function1() {//Declration
+                console.log('Hell World');
+                console.log(2 * 5);
+            }
+            function1();// Function Calling
+            function example(b = 1) {//parameter calling -- setting a default value if no parameter is passed
+                let a = Math.floor(Math.random() * 3 + 1);
+                b = a === 1 ? 'Rock'
+                    : a === 2 ? 'Paper'
+                        : a === 3 ? 'Scissor'
+                            : null;
+                return b;
+            }
+            console.log(example());
+        </script>
+    </body>
+
+</html>

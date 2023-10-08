@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Projects</title>
+        <style>
+            p {
+                margin: 20px;
+                line-height: 20px;
+            }
+
+            button {
+                margin: 20px;
+            }
+
+            .subscribe {
+                background: #161414;
+                border: none;
+                border-radius: 20px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                color: white;
+            }
+
+            .subscribe:hover {
+                cursor: pointer;
+                background-color: rgb(85, 85, 85);
+            }
+
+            .subscribed {
+                background-color: white;
+                color: black;
+            }
+
+            .unsubscribed {
+                background: #161414;
+                border: none;
+                border-radius: 20px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>YouTube Subscribe Button</p>
+        <button onclick="
+        susbcribe();
+        " class="subscribe">
+            Subscribe
+        </button>
+        <!--No space should be between button  -->
+        <p>Rock Paper Scissors</p>
+        <a href="http://127.0.0.1:5500/Game/r_p_s_functions.html" target="_blank">Click Here</a>
+        <p>
+            Amazon Shipping Calculator <br />Orders Under &#8377;90 =+&#8377;40
+            Shipping. <br />Orders Over &#8377;90 = FREE Shipping. <br /><input class="input-Price"
+                placeholder="Enter Price" onkeydown="
+            if (event.key ==='Enter') {
+                calculateTotal();
+            };
+            " />
+            <button onclick="
+           calculateTotal();
+           ">
+                Calculate
+            </button>
+        </p>
+        <p class="final-price"></p>
+        <script>
+            function susbcribe() {
+                const buttonHtml = document.querySelector(".subscribe");
+                if (buttonHtml.innerText == "Subscribe") {
+                    //Innerhtml can also be used if no space is there
+                    buttonHtml.innerText = "Subscribed";
+                    buttonHtml.classList.add("subscribed"); //Adds a class when event lsiter performs its function
+                } else {
+                    buttonHtml.innerHTML = "Subscribe";
+                    buttonHtml.classList.remove("subscribed"); //Adds a class when event lsiter performs its function
+                    //remove the class be added earlier
+                }
+            }
+            function calculateTotal() {
+                const inputPrice = document.querySelector(".input-Price").value;
+
+                // finalInput = JSON.parse(inputPrice);
+                finalInput = Number(inputPrice); //It works same as above
+                finalInput = finalInput < 90 ? finalInput + 40 : finalInput;
+                document.querySelector(
+                    ".final-price"
+                ).innerHTML = `&#8377; ${finalInput}`;
+            }
+        </script>
+    </body>
+
+</html>

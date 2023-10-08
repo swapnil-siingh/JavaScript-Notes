@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>More Array Features</title>
+    </head>
+
+    <body>
+        <!-- * Array are References. Works Similar way like objects -->
+        <!-- ? '%' can be used to get remainder -->
+        <!-- ?  In a while loop Increment statement should be written before continue else it will skip the Increment -->
+        <script>
+            const array1 = [1, 2, 3, 4, 5];
+            const array2 = array1.slice(); // array2 gets the array1 elements
+            // ! Above method is used to avoid updation of array1 when updating array2
+            array1.push(6);
+            console.log(array1);
+            console.log(array2);
+
+            const [first, second] = array1; // To get the first value from array and store it in a variable
+            console.log(first);
+            console.log(second);
+            // Use Of break statement to get Out of Loop
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+                if (i === 5) {
+                    break;
+                }
+            }
+            //Continue --> To skip 1 Iterations of Loop (Skipping a Number)
+        </script>
+    </body>
+</html>

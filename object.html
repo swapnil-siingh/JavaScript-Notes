@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // Objects Syntax -- It lets Us display Multiple Products Together
+            const products = {
+                id: 1, //id and name is property to access the values
+                name: "Sam", //right side is data or values
+            };
+            console.log(products);
+            console.log(products.id);
+            products.name = "GulabJamun";
+            console.log(products);
+            // adding new Property
+            products.price = 100;
+            console.log(products);
+            //deleting a property
+            delete products.id;
+            console.log(products);
+            console.log(typeof products.name); //To get the datatype of the properties or objects
+            console.log(products["name"]);
+            //nested objects
+            const item = {
+                item1: "apple",
+                quality: {
+                    mark: "food grade",
+                    supplier: "pappu fruits",
+                    // fun: function fruits() {
+                    //     console.log('fresh');
+                    // }
+                    method() {
+                        console.log("fresh"); // This is same way of writing the above function
+                    },
+                },
+            };
+            //getting out of nested objects
+            console.log(item.quality.supplier);
+            //function can also be a value of objects
+            console.log(item.quality.fun);
+            console.log(JSON.stringify(item)); //JSON is also an object with universal syntax and less features
+            //Stringify is a method to convert in string
+            //JSON.parse(item);//To convert back to javascript code parse method is used
+            item.quality.method();
+        </script>
+    </body>
+</html>

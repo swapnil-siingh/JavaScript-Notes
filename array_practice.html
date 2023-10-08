@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Array Practice</title>
+    </head>
+
+    <body>
+        <input
+            type="text"
+            placeholder="Enter Task"
+            class="inputTask"
+            onkeydown="
+            if (event.key==='Enter') {
+            const v = document.querySelector('.inputTask').value;
+            todoArray.push(v)
+            console.log(todoArray);
+            }"
+        />
+        <button
+            class="addButton"
+            onclick="
+            const v = document.querySelector('.inputTask').value;
+            todoArray.push(v)
+            let i=0;
+            letj=0;
+            while (i<99) {
+                j=i;
+            console.log(todoArray[j]);                
+            i+=1;
+            }
+
+        "
+        >
+            Add
+        </button>
+        <script>
+            const todoArray = [];
+        </script>
+    </body>
+</html>

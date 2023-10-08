@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <SCRIPT>
+            console.log('HELL'.length);
+            console.log('HELLO'.toLowerCase());
+            const object1 = {
+                message: 'hello',
+                price: 'free'
+            };
+            console.log(object1);
+            const object2 = object1;
+            console.log(object1 === object2);
+            const object3 = {
+                message: 'hello',
+            };
+            console.log(object1 === object3);//It compare the references and not the value inside object
+            //Object are basically references if points to a value
+
+            //Shortcuts
+            // const message = object1.message;
+            const { message, price } = object1;//(Shortcut)It does the same work as above. //new variable can also be added to get other values
+            // out of the Object . Value of price in object1 is stored in variable price
+            console.log(price);
+            //Object Methods
+            const object4 = {
+                // newMessage: message,//We can reassign the stored value in a variable as another objects value
+                message,//(Shorthand Property)Or we can only write the Variable name . It works the same way as above
+            };
+            console.log(object4);
+        </SCRIPT>
+    </body>
+
+</html>

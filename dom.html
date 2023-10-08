@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Data Object Model</title>
+    </head>
+
+    <body>
+        <script>
+            // Create a new object
+            var person = {
+                firstName: "John",
+                lastName: "Doe",
+                // Function
+                fullName: function () {
+                    // Return the full name
+                    return this.firstName + " " + this.lastName;
+                },
+            };
+            // Display the full name
+            document.write(person.fullName()); //Document is to wwrite in the webpage within the body area
+            // It is a type of Object itself
+            document.body.innerHTML = "New Content"; //Replaces all the content present on the page with This
+            document.title = "Studying DOM"; //DOM is used to wwrite HTML in JavaScript
+            document.body.innerHTML = "<button> Good </button>";
+
+            console.log(document.querySelector("button").innerhtml); //It will get the first button in html // innerhtml is used to get
+            //the html inside button i.e. 'good'
+            //To get other button on the page we use classes with .dot notation
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+
+            const basketball = {
+                "name": "basketball",
+                "price": 100,
+            };
+            console.log(basketball);
+            basketball.price += 500;
+            console.log(basketball.price);
+            basketball["delivery time"] = 3;
+            console.log(basketball);
+            const football = {
+                "name": "football",
+                "price": 900,
+            };
+
+            function comparePrice(price) {
+                if (product1.price > product2.price)
+                    return 1;
+                else
+                    return 0;
+            }; const product1 = basketball;
+            const product2 = football;
+            comparePrice() ? console.log(`${product1.name} is Expensive by ${product1.price - product2.price}`)
+                : console.log(`${product2.name} is Expensive by ${product2.price - product1.price}`);
+
+        </script>
+    </body>
+
+</html>
